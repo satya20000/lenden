@@ -1,0 +1,619 @@
+{
+  "name": "CreditPortfolio",
+  "compatibilityLevel": 1600,
+  "model": {
+    "culture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": false
+    },
+    "expressions": [
+      {
+        "name": "DataFolder",
+        "kind": "m",
+        "expression": "\"C:\\PowerBI\\Data\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "tables": [
+      {
+        "name": "fact_loan",
+        "columns": [
+          {
+            "name": "loan_id",
+            "dataType": "int64",
+            "sourceColumn": "loan_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "loan_amnt",
+            "dataType": "int64",
+            "sourceColumn": "loan_amnt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "funded_amnt",
+            "dataType": "int64",
+            "sourceColumn": "funded_amnt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "int_rate",
+            "dataType": "double",
+            "sourceColumn": "int_rate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "annual_inc",
+            "dataType": "double",
+            "sourceColumn": "annual_inc",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "dti",
+            "dataType": "double",
+            "sourceColumn": "dti",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "total_pymnt",
+            "dataType": "double",
+            "sourceColumn": "total_pymnt",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "total_rec_prncp",
+            "dataType": "double",
+            "sourceColumn": "total_rec_prncp",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "total_rec_int",
+            "dataType": "double",
+            "sourceColumn": "total_rec_int",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "recoveries",
+            "dataType": "double",
+            "sourceColumn": "recoveries",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "collection_recovery_fee",
+            "dataType": "double",
+            "sourceColumn": "collection_recovery_fee",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "revol_util",
+            "dataType": "double",
+            "sourceColumn": "revol_util",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "out_prncp",
+            "dataType": "double",
+            "sourceColumn": "out_prncp",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "installment",
+            "dataType": "double",
+            "sourceColumn": "installment",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "delinq_2yrs",
+            "dataType": "int64",
+            "sourceColumn": "delinq_2yrs",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "inq_last_6mths",
+            "dataType": "int64",
+            "sourceColumn": "inq_last_6mths",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "open_acc",
+            "dataType": "int64",
+            "sourceColumn": "open_acc",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "revol_bal",
+            "dataType": "int64",
+            "sourceColumn": "revol_bal",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "total_acc",
+            "dataType": "int64",
+            "sourceColumn": "total_acc",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "grade",
+            "dataType": "string",
+            "sourceColumn": "grade",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "sub_grade",
+            "dataType": "string",
+            "sourceColumn": "sub_grade",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "emp_length",
+            "dataType": "string",
+            "sourceColumn": "emp_length",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "home_ownership",
+            "dataType": "string",
+            "sourceColumn": "home_ownership",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "verification_status",
+            "dataType": "string",
+            "sourceColumn": "verification_status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "purpose",
+            "dataType": "string",
+            "sourceColumn": "purpose",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "issue_d",
+            "dataType": "dateTime",
+            "sourceColumn": "issue_d",
+            "summarizeBy": "none",
+            "formatString": "yyyy-MM-dd HH:mm"
+          },
+          {
+            "name": "issue_date",
+            "dataType": "dateTime",
+            "sourceColumn": "issue_date",
+            "summarizeBy": "none",
+            "formatString": "yyyy-MM-dd"
+          },
+          {
+            "name": "last_pymnt_d",
+            "dataType": "dateTime",
+            "sourceColumn": "last_pymnt_d",
+            "summarizeBy": "none",
+            "formatString": "yyyy-MM-dd HH:mm"
+          },
+          {
+            "name": "loan_status",
+            "dataType": "string",
+            "sourceColumn": "loan_status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "resolved",
+            "dataType": "int64",
+            "sourceColumn": "resolved",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "default_flag",
+            "dataType": "double",
+            "sourceColumn": "default_flag",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "fully_paid",
+            "dataType": "int64",
+            "sourceColumn": "fully_paid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "current",
+            "dataType": "int64",
+            "sourceColumn": "current",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "term_months",
+            "dataType": "int64",
+            "sourceColumn": "term_months",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "issue_year",
+            "dataType": "int64",
+            "sourceColumn": "issue_year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "issue_month",
+            "dataType": "string",
+            "sourceColumn": "issue_month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "dti_band",
+            "dataType": "string",
+            "sourceColumn": "dti_band",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "income_band",
+            "dataType": "string",
+            "sourceColumn": "income_band",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "interest_band",
+            "dataType": "string",
+            "sourceColumn": "interest_band",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "fico",
+            "dataType": "double",
+            "sourceColumn": "fico",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "fico_band",
+            "dataType": "string",
+            "sourceColumn": "fico_band",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "net_cash",
+            "dataType": "double",
+            "sourceColumn": "net_cash",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "unreturned_principal",
+            "dataType": "double",
+            "sourceColumn": "unreturned_principal",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "pre_recovery_exposure",
+            "dataType": "double",
+            "sourceColumn": "pre_recovery_exposure",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "fact_loan",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\fact_loan.csv\"), [Delimiter=\",\", Columns=44, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"loan_id\", Int64.Type}, {\"loan_amnt\", Int64.Type}, {\"funded_amnt\", Int64.Type}, {\"int_rate\", type number}, {\"annual_inc\", type number}, {\"dti\", type number}, {\"total_pymnt\", type number}, {\"total_rec_prncp\", type number}, {\"total_rec_int\", type number}, {\"recoveries\", type number}, {\"collection_recovery_fee\", type number}, {\"revol_util\", type number}, {\"out_prncp\", type number}, {\"installment\", type number}, {\"delinq_2yrs\", Int64.Type}, {\"inq_last_6mths\", Int64.Type}, {\"open_acc\", Int64.Type}, {\"revol_bal\", Int64.Type}, {\"total_acc\", Int64.Type}, {\"grade\", type text}, {\"sub_grade\", type text}, {\"emp_length\", type text}, {\"home_ownership\", type text}, {\"verification_status\", type text}, {\"purpose\", type text}, {\"issue_d\", type datetime}, {\"issue_date\", type date}, {\"last_pymnt_d\", type datetime}, {\"loan_status\", type text}, {\"resolved\", Int64.Type}, {\"default_flag\", type number}, {\"fully_paid\", Int64.Type}, {\"current\", Int64.Type}, {\"term_months\", Int64.Type}, {\"issue_year\", Int64.Type}, {\"issue_month\", type text}, {\"dti_band\", type text}, {\"income_band\", type text}, {\"interest_band\", type text}, {\"fico\", type number}, {\"fico_band\", type text}, {\"net_cash\", type number}, {\"unreturned_principal\", type number}, {\"pre_recovery_exposure\", type number}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Total Loans",
+            "expression": "COUNTROWS(fact_loan)",
+            "displayFolder": "Performance",
+            "description": "Total Loans; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Funded Amount",
+            "expression": "SUM(fact_loan[funded_amnt])",
+            "displayFolder": "Performance",
+            "description": "Funded Amount; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "\"USD \"#,0.00;(#,0.00);0.00"
+          },
+          {
+            "name": "Average Loan Amount",
+            "expression": "AVERAGE(fact_loan[loan_amnt])",
+            "displayFolder": "Performance",
+            "description": "Average Loan Amount; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "\"USD \"#,0.00;(#,0.00);0.00"
+          },
+          {
+            "name": "Average Interest Rate",
+            "expression": "DIVIDE(AVERAGE(fact_loan[int_rate]), 100)",
+            "displayFolder": "Performance",
+            "description": "Average Interest Rate; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "0.0%;-0.0%;0.0%"
+          },
+          {
+            "name": "Resolved Loans",
+            "expression": "SUM(fact_loan[resolved])",
+            "displayFolder": "Performance",
+            "description": "Resolved Loans; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Defaulted Loans",
+            "expression": "SUM(fact_loan[default_flag])",
+            "displayFolder": "Performance",
+            "description": "Defaulted Loans; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Default Rate",
+            "expression": "DIVIDE([Defaulted Loans], [Resolved Loans])",
+            "displayFolder": "Performance",
+            "description": "Default Rate; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "0.0%;-0.0%;0.0%"
+          },
+          {
+            "name": "Fully Paid Rate",
+            "expression": "DIVIDE(SUM(fact_loan[fully_paid]), [Resolved Loans])",
+            "displayFolder": "Performance",
+            "description": "Fully Paid Rate; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "0.0%;-0.0%;0.0%"
+          },
+          {
+            "name": "Current Share",
+            "expression": "DIVIDE(SUM(fact_loan[current]), [Total Loans])",
+            "displayFolder": "Performance",
+            "description": "Current Share; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "0.0%;-0.0%;0.0%"
+          },
+          {
+            "name": "Interest Received",
+            "expression": "SUM(fact_loan[total_rec_int])",
+            "displayFolder": "Performance",
+            "description": "Interest Received; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "\"USD \"#,0.00;(#,0.00);0.00"
+          },
+          {
+            "name": "Payments Received",
+            "expression": "SUM(fact_loan[total_pymnt])",
+            "displayFolder": "Performance",
+            "description": "Payments Received; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "\"USD \"#,0.00;(#,0.00);0.00"
+          },
+          {
+            "name": "Average DTI",
+            "expression": "AVERAGE(fact_loan[dti])",
+            "displayFolder": "Performance",
+            "description": "Average DTI; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "0.00"
+          },
+          {
+            "name": "Default Origination Amount",
+            "expression": "CALCULATE([Funded Amount], fact_loan[default_flag] = 1)",
+            "displayFolder": "Performance",
+            "description": "Default Origination Amount; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "\"USD \"#,0.00;(#,0.00);0.00"
+          },
+          {
+            "name": "Net Unreturned Principal",
+            "expression": "SUM(fact_loan[unreturned_principal])",
+            "displayFolder": "Performance",
+            "description": "Net Unreturned Principal; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "\"USD \"#,0.00;(#,0.00);0.00"
+          },
+          {
+            "name": "Recovery Rate",
+            "expression": "DIVIDE(CALCULATE(SUM(fact_loan[recoveries]), fact_loan[default_flag] = 1), SUM(fact_loan[pre_recovery_exposure]))",
+            "displayFolder": "Performance",
+            "description": "Recovery Rate; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "0.0%;-0.0%;0.0%"
+          },
+          {
+            "name": "Net Return Proxy",
+            "expression": "DIVIDE([Resolved Net Cash], [Resolved Funded Amount])",
+            "displayFolder": "Performance",
+            "description": "Net Return Proxy; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "0.0%;-0.0%;0.0%"
+          },
+          {
+            "name": "Average FICO",
+            "expression": "BLANK()",
+            "displayFolder": "Performance",
+            "description": "Average FICO; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Resolved Funded Amount",
+            "expression": "CALCULATE([Funded Amount], fact_loan[resolved] = 1)",
+            "displayFolder": "Performance",
+            "description": "Resolved Funded Amount; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "\"USD \"#,0.00;(#,0.00);0.00"
+          },
+          {
+            "name": "Resolved Payments",
+            "expression": "CALCULATE([Payments Received], fact_loan[resolved] = 1)",
+            "displayFolder": "Performance",
+            "description": "Resolved Payments; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "\"USD \"#,0.00;(#,0.00);0.00"
+          },
+          {
+            "name": "Resolved Net Cash",
+            "expression": "CALCULATE(SUM(fact_loan[net_cash]), fact_loan[resolved] = 1)",
+            "displayFolder": "Performance",
+            "description": "Resolved Net Cash; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "\"USD \"#,0.00;(#,0.00);0.00"
+          },
+          {
+            "name": "Resolved Coverage",
+            "expression": "DIVIDE([Resolved Loans], [Total Loans])",
+            "displayFolder": "Context & quality",
+            "description": "Resolved Coverage; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "0.0%;-0.0%;0.0%"
+          },
+          {
+            "name": "Current Loans",
+            "expression": "SUM(fact_loan[current])",
+            "displayFolder": "Performance",
+            "description": "Current Loans; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Default Rate Baseline",
+            "expression": "CALCULATE([Default Rate], REMOVEFILTERS(fact_loan[purpose]))",
+            "displayFolder": "Investigations",
+            "description": "Default Rate Baseline; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "0.0%;-0.0%;0.0%"
+          },
+          {
+            "name": "Segment Excess Default pp",
+            "expression": "100 * ([Default Rate] - [Default Rate Baseline])",
+            "displayFolder": "Investigations",
+            "description": "Segment Excess Default pp; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "0.0\" pp\";-0.0\" pp\";0.0\" pp\""
+          },
+          {
+            "name": "Segment Review Flag",
+            "expression": "IF([Resolved Loans] >= 200 && [Default Rate] > [Default Rate Baseline], 1, BLANK())",
+            "displayFolder": "Investigations",
+            "description": "Segment Review Flag; defined over the current slicer and visual context. See report definitions and DAX source for population policy.",
+            "formatString": "#,0"
+          },
+          {
+            "name": "Context Insight",
+            "expression": "IF([Resolved Loans] = 0, \"No resolved loans in the current selection\", FORMAT([Defaulted Loans], \"#,0\") & \" charged-off/default outcomes among \" & FORMAT([Resolved Loans], \"#,0\") & \" resolved loans. \" & FORMAT([Current Loans], \"#,0\") & \" current loans remain outside resolved-outcome rates.\")",
+            "displayFolder": "Context & quality",
+            "description": "Context Insight; defined over the current slicer and visual context. See report definitions and DAX source for population policy."
+          },
+          {
+            "name": "Period Coverage",
+            "expression": "FORMAT(MIN(fact_loan[issue_date]), \"MMM yyyy\") & \" – \" & FORMAT(MAX(fact_loan[issue_date]), \"MMM yyyy\")",
+            "displayFolder": "Context & quality",
+            "description": "Period Coverage; defined over the current slicer and visual context. See report definitions and DAX source for population policy."
+          }
+        ]
+      },
+      {
+        "name": "dim_grade",
+        "columns": [
+          {
+            "name": "grade",
+            "dataType": "string",
+            "sourceColumn": "grade",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_grade",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\dim_grade.csv\"), [Delimiter=\",\", Columns=1, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"grade\", type text}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "description": "Single-direction dimension; keys validated against source data."
+      },
+      {
+        "name": "dim_date",
+        "columns": [
+          {
+            "name": "date",
+            "dataType": "dateTime",
+            "sourceColumn": "date",
+            "summarizeBy": "none",
+            "formatString": "yyyy-MM-dd"
+          },
+          {
+            "name": "year",
+            "dataType": "int64",
+            "sourceColumn": "year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month",
+            "dataType": "string",
+            "sourceColumn": "month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "quarter",
+            "dataType": "int64",
+            "sourceColumn": "quarter",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "month_number",
+            "dataType": "int64",
+            "sourceColumn": "month_number",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dim_date",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DataFolder & \"\\dim_date.csv\"), [Delimiter=\",\", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Headers = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Nulls = Table.ReplaceValue(Headers, \"\", null, Replacer.ReplaceValue, Table.ColumnNames(Headers)),",
+                "    Typed = Table.TransformColumnTypes(Nulls, {{\"date\", type date}, {\"year\", Int64.Type}, {\"month\", type text}, {\"quarter\", Int64.Type}, {\"month_number\", Int64.Type}}, \"en-US\")",
+                "in",
+                "    Typed"
+              ]
+            }
+          }
+        ],
+        "description": "Single-direction dimension; keys validated against source data."
+      }
+    ],
+    "relationships": [
+      {
+        "name": "6cd59824-0bc0-5232-8863-bd083f5d9c95",
+        "fromTable": "fact_loan",
+        "fromColumn": "grade",
+        "toTable": "dim_grade",
+        "toColumn": "grade",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "d1f40bee-ae55-5296-a472-4aa27b3bad8c",
+        "fromTable": "fact_loan",
+        "fromColumn": "issue_date",
+        "toTable": "dim_date",
+        "toColumn": "date",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      }
+    ],
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"fact_loan\", \"dim_grade\", \"dim_date\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      }
+    ]
+  }
+}

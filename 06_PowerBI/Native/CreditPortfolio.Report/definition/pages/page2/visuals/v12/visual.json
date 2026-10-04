@@ -1,0 +1,289 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "v12",
+  "position": {
+    "x": 24,
+    "y": 600,
+    "width": 1392,
+    "height": 292,
+    "z": 12,
+    "tabOrder": 12
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Grade outcomes · unresolved loans remain outside default and return rates'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#172A43'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segoe UI Semibold'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Grade outcomes · unresolved loans remain outside default and return rates'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "grid": [
+        {
+          "properties": {
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "rowPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "7D"
+                }
+              }
+            },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_grade"
+                    }
+                  },
+                  "Property": "grade"
+                }
+              },
+              "queryRef": "dim_grade.grade",
+              "nativeQueryRef": "grade",
+              "displayName": "Grade"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_loan"
+                    }
+                  },
+                  "Property": "Total Loans"
+                }
+              },
+              "queryRef": "fact_loan.Total Loans",
+              "nativeQueryRef": "Total Loans",
+              "displayName": "Total Loans"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_loan"
+                    }
+                  },
+                  "Property": "Resolved Loans"
+                }
+              },
+              "queryRef": "fact_loan.Resolved Loans",
+              "nativeQueryRef": "Resolved Loans",
+              "displayName": "Resolved Loans"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_loan"
+                    }
+                  },
+                  "Property": "Current Share"
+                }
+              },
+              "queryRef": "fact_loan.Current Share",
+              "nativeQueryRef": "Current Share",
+              "displayName": "Current Share"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_loan"
+                    }
+                  },
+                  "Property": "Default Rate"
+                }
+              },
+              "queryRef": "fact_loan.Default Rate",
+              "nativeQueryRef": "Default Rate",
+              "displayName": "Default Rate"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_loan"
+                    }
+                  },
+                  "Property": "Resolved Funded Amount"
+                }
+              },
+              "queryRef": "fact_loan.Resolved Funded Amount",
+              "nativeQueryRef": "Resolved Funded Amount",
+              "displayName": "Resolved Funded Amount"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_loan"
+                    }
+                  },
+                  "Property": "Net Return Proxy"
+                }
+              },
+              "queryRef": "fact_loan.Net Return Proxy",
+              "nativeQueryRef": "Net Return Proxy",
+              "displayName": "Net Return Proxy"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_loan"
+                    }
+                  },
+                  "Property": "Recovery Rate"
+                }
+              },
+              "queryRef": "fact_loan.Recovery Rate",
+              "nativeQueryRef": "Recovery Rate",
+              "displayName": "Recovery Rate"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_loan"
+                  }
+                },
+                "Property": "Total Loans"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": false
+      }
+    }
+  }
+}

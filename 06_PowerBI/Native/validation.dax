@@ -1,0 +1,7 @@
+EVALUATE
+ROW(
+    "Funded Amount", [Funded Amount],
+    "Default Rate", [Default Rate],
+    "Net Return Proxy", [Net Return Proxy],
+    "Current Share", [Current Share]
+)

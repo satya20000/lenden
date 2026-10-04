@@ -1,0 +1,1969 @@
+{
+  "project": "CreditPortfolio",
+  "pages": [
+    {
+      "name": "page1",
+      "title": "Overview",
+      "count": 13,
+      "visuals": [
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 24,
+            "y": 12,
+            "width": 1388,
+            "height": 62,
+            "z": 1,
+            "tabOrder": 1
+          },
+          "roles": {}
+        },
+        {
+          "type": "slicer",
+          "title": "Origination year",
+          "position": {
+            "x": 24,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 2,
+            "tabOrder": 2
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "issue_year"
+                  }
+                },
+                "queryRef": "fact_loan.issue_year",
+                "nativeQueryRef": "issue_year",
+                "displayName": "Origination year"
+              }
+            ]
+          }
+        },
+        {
+          "type": "slicer",
+          "title": "Loan grade",
+          "position": {
+            "x": 496,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 3,
+            "tabOrder": 3
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_grade"
+                      }
+                    },
+                    "Property": "grade"
+                  }
+                },
+                "queryRef": "dim_grade.grade",
+                "nativeQueryRef": "grade",
+                "displayName": "Loan grade"
+              }
+            ]
+          }
+        },
+        {
+          "type": "slicer",
+          "title": "Term in months",
+          "position": {
+            "x": 968,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 4,
+            "tabOrder": 4
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "term_months"
+                  }
+                },
+                "queryRef": "fact_loan.term_months",
+                "nativeQueryRef": "term_months",
+                "displayName": "Term in months"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Funded Amount",
+          "position": {
+            "x": 24,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 5,
+            "tabOrder": 5
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Funded Amount"
+                  }
+                },
+                "queryRef": "fact_loan.Funded Amount",
+                "nativeQueryRef": "Funded Amount",
+                "displayName": "Funded Amount"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Default Rate",
+          "position": {
+            "x": 378,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 6,
+            "tabOrder": 6
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Default Rate"
+                  }
+                },
+                "queryRef": "fact_loan.Default Rate",
+                "nativeQueryRef": "Default Rate",
+                "displayName": "Default Rate"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Net Return Proxy",
+          "position": {
+            "x": 732,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 7,
+            "tabOrder": 7
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Net Return Proxy"
+                  }
+                },
+                "queryRef": "fact_loan.Net Return Proxy",
+                "nativeQueryRef": "Net Return Proxy",
+                "displayName": "Net Return Proxy"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Current Share",
+          "position": {
+            "x": 1086,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 8,
+            "tabOrder": 8
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Current Share"
+                  }
+                },
+                "queryRef": "fact_loan.Current Share",
+                "nativeQueryRef": "Current Share",
+                "displayName": "Current Share"
+              }
+            ]
+          }
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 24,
+            "y": 918,
+            "width": 1392,
+            "height": 32,
+            "z": 9,
+            "tabOrder": 9
+          },
+          "roles": {}
+        },
+        {
+          "type": "clusteredBarChart",
+          "title": "Resolved default rate by grade",
+          "position": {
+            "x": 24,
+            "y": 300,
+            "width": 684,
+            "height": 282,
+            "z": 10,
+            "tabOrder": 10
+          },
+          "roles": {
+            "Category": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_grade"
+                      }
+                    },
+                    "Property": "grade"
+                  }
+                },
+                "queryRef": "dim_grade.grade",
+                "nativeQueryRef": "grade",
+                "displayName": "Grade"
+              }
+            ],
+            "Y": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Default Rate"
+                  }
+                },
+                "queryRef": "fact_loan.Default Rate",
+                "nativeQueryRef": "Default Rate",
+                "displayName": "Default Rate"
+              }
+            ],
+            "Tooltips": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Resolved Loans"
+                  }
+                },
+                "queryRef": "fact_loan.Resolved Loans",
+                "nativeQueryRef": "Resolved Loans",
+                "displayName": "Resolved Loans"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Defaulted Loans"
+                  }
+                },
+                "queryRef": "fact_loan.Defaulted Loans",
+                "nativeQueryRef": "Defaulted Loans",
+                "displayName": "Defaulted Loans"
+              }
+            ]
+          }
+        },
+        {
+          "type": "clusteredColumnChart",
+          "title": "Cumulative net cash return by grade · not annualized",
+          "position": {
+            "x": 732,
+            "y": 300,
+            "width": 684,
+            "height": 282,
+            "z": 11,
+            "tabOrder": 11
+          },
+          "roles": {
+            "Category": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_grade"
+                      }
+                    },
+                    "Property": "grade"
+                  }
+                },
+                "queryRef": "dim_grade.grade",
+                "nativeQueryRef": "grade",
+                "displayName": "Grade"
+              }
+            ],
+            "Y": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Net Return Proxy"
+                  }
+                },
+                "queryRef": "fact_loan.Net Return Proxy",
+                "nativeQueryRef": "Net Return Proxy",
+                "displayName": "Net Return Proxy"
+              }
+            ],
+            "Tooltips": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Resolved Funded Amount"
+                  }
+                },
+                "queryRef": "fact_loan.Resolved Funded Amount",
+                "nativeQueryRef": "Resolved Funded Amount",
+                "displayName": "Resolved Funded Amount"
+              }
+            ]
+          }
+        },
+        {
+          "type": "lineChart",
+          "title": "Resolved default rate by origination year",
+          "position": {
+            "x": 24,
+            "y": 602,
+            "width": 684,
+            "height": 290,
+            "z": 12,
+            "tabOrder": 12
+          },
+          "roles": {
+            "Category": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "issue_year"
+                  }
+                },
+                "queryRef": "fact_loan.issue_year",
+                "nativeQueryRef": "issue_year",
+                "displayName": "Issue Year"
+              }
+            ],
+            "Y": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Default Rate"
+                  }
+                },
+                "queryRef": "fact_loan.Default Rate",
+                "nativeQueryRef": "Default Rate",
+                "displayName": "Default Rate"
+              }
+            ],
+            "Tooltips": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Resolved Loans"
+                  }
+                },
+                "queryRef": "fact_loan.Resolved Loans",
+                "nativeQueryRef": "Resolved Loans",
+                "displayName": "Resolved Loans"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Current Share"
+                  }
+                },
+                "queryRef": "fact_loan.Current Share",
+                "nativeQueryRef": "Current Share",
+                "displayName": "Current Share"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Investigation context",
+          "position": {
+            "x": 732,
+            "y": 602,
+            "width": 684,
+            "height": 290,
+            "z": 13,
+            "tabOrder": 13
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Context Insight"
+                  }
+                },
+                "queryRef": "fact_loan.Context Insight",
+                "nativeQueryRef": "Context Insight",
+                "displayName": "Context Insight"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "page2",
+      "title": "Grades & vintages",
+      "count": 12,
+      "visuals": [
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 24,
+            "y": 12,
+            "width": 1388,
+            "height": 62,
+            "z": 1,
+            "tabOrder": 1
+          },
+          "roles": {}
+        },
+        {
+          "type": "slicer",
+          "title": "Origination year",
+          "position": {
+            "x": 24,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 2,
+            "tabOrder": 2
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "issue_year"
+                  }
+                },
+                "queryRef": "fact_loan.issue_year",
+                "nativeQueryRef": "issue_year",
+                "displayName": "Origination year"
+              }
+            ]
+          }
+        },
+        {
+          "type": "slicer",
+          "title": "Loan grade",
+          "position": {
+            "x": 496,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 3,
+            "tabOrder": 3
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_grade"
+                      }
+                    },
+                    "Property": "grade"
+                  }
+                },
+                "queryRef": "dim_grade.grade",
+                "nativeQueryRef": "grade",
+                "displayName": "Loan grade"
+              }
+            ]
+          }
+        },
+        {
+          "type": "slicer",
+          "title": "Term in months",
+          "position": {
+            "x": 968,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 4,
+            "tabOrder": 4
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "term_months"
+                  }
+                },
+                "queryRef": "fact_loan.term_months",
+                "nativeQueryRef": "term_months",
+                "displayName": "Term in months"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Resolved Loans",
+          "position": {
+            "x": 24,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 5,
+            "tabOrder": 5
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Resolved Loans"
+                  }
+                },
+                "queryRef": "fact_loan.Resolved Loans",
+                "nativeQueryRef": "Resolved Loans",
+                "displayName": "Resolved Loans"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Resolved Coverage",
+          "position": {
+            "x": 378,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 6,
+            "tabOrder": 6
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Resolved Coverage"
+                  }
+                },
+                "queryRef": "fact_loan.Resolved Coverage",
+                "nativeQueryRef": "Resolved Coverage",
+                "displayName": "Resolved Coverage"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Net Unreturned Principal",
+          "position": {
+            "x": 732,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 7,
+            "tabOrder": 7
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Net Unreturned Principal"
+                  }
+                },
+                "queryRef": "fact_loan.Net Unreturned Principal",
+                "nativeQueryRef": "Net Unreturned Principal",
+                "displayName": "Net Unreturned Principal"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Recovery Rate",
+          "position": {
+            "x": 1086,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 8,
+            "tabOrder": 8
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Recovery Rate"
+                  }
+                },
+                "queryRef": "fact_loan.Recovery Rate",
+                "nativeQueryRef": "Recovery Rate",
+                "displayName": "Recovery Rate"
+              }
+            ]
+          }
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 24,
+            "y": 918,
+            "width": 1392,
+            "height": 32,
+            "z": 9,
+            "tabOrder": 9
+          },
+          "roles": {}
+        },
+        {
+          "type": "scatterChart",
+          "title": "Grade risk and return · bubble size = resolved funding",
+          "position": {
+            "x": 24,
+            "y": 300,
+            "width": 684,
+            "height": 282,
+            "z": 10,
+            "tabOrder": 10
+          },
+          "roles": {
+            "Category": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_grade"
+                      }
+                    },
+                    "Property": "grade"
+                  }
+                },
+                "queryRef": "dim_grade.grade",
+                "nativeQueryRef": "grade",
+                "displayName": "Grade"
+              }
+            ],
+            "X": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Default Rate"
+                  }
+                },
+                "queryRef": "fact_loan.Default Rate",
+                "nativeQueryRef": "Default Rate",
+                "displayName": "Default Rate"
+              }
+            ],
+            "Y": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Net Return Proxy"
+                  }
+                },
+                "queryRef": "fact_loan.Net Return Proxy",
+                "nativeQueryRef": "Net Return Proxy",
+                "displayName": "Net Return Proxy"
+              }
+            ],
+            "Size": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Resolved Funded Amount"
+                  }
+                },
+                "queryRef": "fact_loan.Resolved Funded Amount",
+                "nativeQueryRef": "Resolved Funded Amount",
+                "displayName": "Resolved Funded Amount"
+              }
+            ],
+            "Tooltips": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Resolved Loans"
+                  }
+                },
+                "queryRef": "fact_loan.Resolved Loans",
+                "nativeQueryRef": "Resolved Loans",
+                "displayName": "Resolved Loans"
+              }
+            ]
+          }
+        },
+        {
+          "type": "lineChart",
+          "title": "Cumulative cash return by vintage · compare matched terms",
+          "position": {
+            "x": 732,
+            "y": 300,
+            "width": 684,
+            "height": 282,
+            "z": 11,
+            "tabOrder": 11
+          },
+          "roles": {
+            "Category": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "issue_year"
+                  }
+                },
+                "queryRef": "fact_loan.issue_year",
+                "nativeQueryRef": "issue_year",
+                "displayName": "Issue Year"
+              }
+            ],
+            "Y": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Net Return Proxy"
+                  }
+                },
+                "queryRef": "fact_loan.Net Return Proxy",
+                "nativeQueryRef": "Net Return Proxy",
+                "displayName": "Net Return Proxy"
+              }
+            ]
+          }
+        },
+        {
+          "type": "tableEx",
+          "title": "Grade outcomes · unresolved loans remain outside default and return rates",
+          "position": {
+            "x": 24,
+            "y": 600,
+            "width": 1392,
+            "height": 292,
+            "z": 12,
+            "tabOrder": 12
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_grade"
+                      }
+                    },
+                    "Property": "grade"
+                  }
+                },
+                "queryRef": "dim_grade.grade",
+                "nativeQueryRef": "grade",
+                "displayName": "Grade"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Total Loans"
+                  }
+                },
+                "queryRef": "fact_loan.Total Loans",
+                "nativeQueryRef": "Total Loans",
+                "displayName": "Total Loans"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Resolved Loans"
+                  }
+                },
+                "queryRef": "fact_loan.Resolved Loans",
+                "nativeQueryRef": "Resolved Loans",
+                "displayName": "Resolved Loans"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Current Share"
+                  }
+                },
+                "queryRef": "fact_loan.Current Share",
+                "nativeQueryRef": "Current Share",
+                "displayName": "Current Share"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Default Rate"
+                  }
+                },
+                "queryRef": "fact_loan.Default Rate",
+                "nativeQueryRef": "Default Rate",
+                "displayName": "Default Rate"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Resolved Funded Amount"
+                  }
+                },
+                "queryRef": "fact_loan.Resolved Funded Amount",
+                "nativeQueryRef": "Resolved Funded Amount",
+                "displayName": "Resolved Funded Amount"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Net Return Proxy"
+                  }
+                },
+                "queryRef": "fact_loan.Net Return Proxy",
+                "nativeQueryRef": "Net Return Proxy",
+                "displayName": "Net Return Proxy"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Recovery Rate"
+                  }
+                },
+                "queryRef": "fact_loan.Recovery Rate",
+                "nativeQueryRef": "Recovery Rate",
+                "displayName": "Recovery Rate"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "page3",
+      "title": "Segment investigations",
+      "count": 12,
+      "visuals": [
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 24,
+            "y": 12,
+            "width": 1388,
+            "height": 62,
+            "z": 1,
+            "tabOrder": 1
+          },
+          "roles": {}
+        },
+        {
+          "type": "slicer",
+          "title": "Origination year",
+          "position": {
+            "x": 24,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 2,
+            "tabOrder": 2
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "issue_year"
+                  }
+                },
+                "queryRef": "fact_loan.issue_year",
+                "nativeQueryRef": "issue_year",
+                "displayName": "Origination year"
+              }
+            ]
+          }
+        },
+        {
+          "type": "slicer",
+          "title": "Loan grade",
+          "position": {
+            "x": 496,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 3,
+            "tabOrder": 3
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_grade"
+                      }
+                    },
+                    "Property": "grade"
+                  }
+                },
+                "queryRef": "dim_grade.grade",
+                "nativeQueryRef": "grade",
+                "displayName": "Loan grade"
+              }
+            ]
+          }
+        },
+        {
+          "type": "slicer",
+          "title": "Term in months",
+          "position": {
+            "x": 968,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 4,
+            "tabOrder": 4
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "term_months"
+                  }
+                },
+                "queryRef": "fact_loan.term_months",
+                "nativeQueryRef": "term_months",
+                "displayName": "Term in months"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Resolved Loans",
+          "position": {
+            "x": 24,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 5,
+            "tabOrder": 5
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Resolved Loans"
+                  }
+                },
+                "queryRef": "fact_loan.Resolved Loans",
+                "nativeQueryRef": "Resolved Loans",
+                "displayName": "Resolved Loans"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Defaulted Loans",
+          "position": {
+            "x": 378,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 6,
+            "tabOrder": 6
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Defaulted Loans"
+                  }
+                },
+                "queryRef": "fact_loan.Defaulted Loans",
+                "nativeQueryRef": "Defaulted Loans",
+                "displayName": "Defaulted Loans"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Average DTI",
+          "position": {
+            "x": 732,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 7,
+            "tabOrder": 7
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Average DTI"
+                  }
+                },
+                "queryRef": "fact_loan.Average DTI",
+                "nativeQueryRef": "Average DTI",
+                "displayName": "Average DTI"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Average Interest Rate",
+          "position": {
+            "x": 1086,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 8,
+            "tabOrder": 8
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Average Interest Rate"
+                  }
+                },
+                "queryRef": "fact_loan.Average Interest Rate",
+                "nativeQueryRef": "Average Interest Rate",
+                "displayName": "Average Interest Rate"
+              }
+            ]
+          }
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 24,
+            "y": 918,
+            "width": 1392,
+            "height": 32,
+            "z": 9,
+            "tabOrder": 9
+          },
+          "roles": {}
+        },
+        {
+          "type": "clusteredBarChart",
+          "title": "Resolved default rate by DTI band",
+          "position": {
+            "x": 24,
+            "y": 300,
+            "width": 684,
+            "height": 282,
+            "z": 10,
+            "tabOrder": 10
+          },
+          "roles": {
+            "Category": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "dti_band"
+                  }
+                },
+                "queryRef": "fact_loan.dti_band",
+                "nativeQueryRef": "dti_band",
+                "displayName": "Dti Band"
+              }
+            ],
+            "Y": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Default Rate"
+                  }
+                },
+                "queryRef": "fact_loan.Default Rate",
+                "nativeQueryRef": "Default Rate",
+                "displayName": "Default Rate"
+              }
+            ],
+            "Tooltips": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Resolved Loans"
+                  }
+                },
+                "queryRef": "fact_loan.Resolved Loans",
+                "nativeQueryRef": "Resolved Loans",
+                "displayName": "Resolved Loans"
+              }
+            ]
+          }
+        },
+        {
+          "type": "clusteredBarChart",
+          "title": "Resolved default rate by income band",
+          "position": {
+            "x": 732,
+            "y": 300,
+            "width": 684,
+            "height": 282,
+            "z": 11,
+            "tabOrder": 11
+          },
+          "roles": {
+            "Category": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "income_band"
+                  }
+                },
+                "queryRef": "fact_loan.income_band",
+                "nativeQueryRef": "income_band",
+                "displayName": "Income Band"
+              }
+            ],
+            "Y": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Default Rate"
+                  }
+                },
+                "queryRef": "fact_loan.Default Rate",
+                "nativeQueryRef": "Default Rate",
+                "displayName": "Default Rate"
+              }
+            ],
+            "Tooltips": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Resolved Loans"
+                  }
+                },
+                "queryRef": "fact_loan.Resolved Loans",
+                "nativeQueryRef": "Resolved Loans",
+                "displayName": "Resolved Loans"
+              }
+            ]
+          }
+        },
+        {
+          "type": "tableEx",
+          "title": "Purpose review queue · ≥200 resolved loans and above peer default rate",
+          "position": {
+            "x": 24,
+            "y": 600,
+            "width": 1392,
+            "height": 292,
+            "z": 12,
+            "tabOrder": 12
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "purpose"
+                  }
+                },
+                "queryRef": "fact_loan.purpose",
+                "nativeQueryRef": "purpose",
+                "displayName": "Loan purpose"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Resolved Loans"
+                  }
+                },
+                "queryRef": "fact_loan.Resolved Loans",
+                "nativeQueryRef": "Resolved Loans",
+                "displayName": "Resolved Loans"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Defaulted Loans"
+                  }
+                },
+                "queryRef": "fact_loan.Defaulted Loans",
+                "nativeQueryRef": "Defaulted Loans",
+                "displayName": "Defaulted Loans"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Default Rate"
+                  }
+                },
+                "queryRef": "fact_loan.Default Rate",
+                "nativeQueryRef": "Default Rate",
+                "displayName": "Default Rate"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Segment Excess Default pp"
+                  }
+                },
+                "queryRef": "fact_loan.Segment Excess Default pp",
+                "nativeQueryRef": "Segment Excess Default pp",
+                "displayName": "Segment Excess Default pp"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Net Return Proxy"
+                  }
+                },
+                "queryRef": "fact_loan.Net Return Proxy",
+                "nativeQueryRef": "Net Return Proxy",
+                "displayName": "Net Return Proxy"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Average DTI"
+                  }
+                },
+                "queryRef": "fact_loan.Average DTI",
+                "nativeQueryRef": "Average DTI",
+                "displayName": "Average DTI"
+              },
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Average Interest Rate"
+                  }
+                },
+                "queryRef": "fact_loan.Average Interest Rate",
+                "nativeQueryRef": "Average Interest Rate",
+                "displayName": "Average Interest Rate"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "page4",
+      "title": "Definitions & use",
+      "count": 19,
+      "visuals": [
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 24,
+            "y": 12,
+            "width": 1388,
+            "height": 62,
+            "z": 1,
+            "tabOrder": 1
+          },
+          "roles": {}
+        },
+        {
+          "type": "slicer",
+          "title": "Origination year",
+          "position": {
+            "x": 24,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 2,
+            "tabOrder": 2
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "issue_year"
+                  }
+                },
+                "queryRef": "fact_loan.issue_year",
+                "nativeQueryRef": "issue_year",
+                "displayName": "Origination year"
+              }
+            ]
+          }
+        },
+        {
+          "type": "slicer",
+          "title": "Loan grade",
+          "position": {
+            "x": 496,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 3,
+            "tabOrder": 3
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "dim_grade"
+                      }
+                    },
+                    "Property": "grade"
+                  }
+                },
+                "queryRef": "dim_grade.grade",
+                "nativeQueryRef": "grade",
+                "displayName": "Loan grade"
+              }
+            ]
+          }
+        },
+        {
+          "type": "slicer",
+          "title": "Term in months",
+          "position": {
+            "x": 968,
+            "y": 84,
+            "width": 448,
+            "height": 76,
+            "z": 4,
+            "tabOrder": 4
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "term_months"
+                  }
+                },
+                "queryRef": "fact_loan.term_months",
+                "nativeQueryRef": "term_months",
+                "displayName": "Term in months"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Funded Amount",
+          "position": {
+            "x": 24,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 5,
+            "tabOrder": 5
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Funded Amount"
+                  }
+                },
+                "queryRef": "fact_loan.Funded Amount",
+                "nativeQueryRef": "Funded Amount",
+                "displayName": "Funded Amount"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Default Rate",
+          "position": {
+            "x": 378,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 6,
+            "tabOrder": 6
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Default Rate"
+                  }
+                },
+                "queryRef": "fact_loan.Default Rate",
+                "nativeQueryRef": "Default Rate",
+                "displayName": "Default Rate"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Net Return Proxy",
+          "position": {
+            "x": 732,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 7,
+            "tabOrder": 7
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Net Return Proxy"
+                  }
+                },
+                "queryRef": "fact_loan.Net Return Proxy",
+                "nativeQueryRef": "Net Return Proxy",
+                "displayName": "Net Return Proxy"
+              }
+            ]
+          }
+        },
+        {
+          "type": "card",
+          "title": "Current Share",
+          "position": {
+            "x": 1086,
+            "y": 180,
+            "width": 330,
+            "height": 98,
+            "z": 8,
+            "tabOrder": 8
+          },
+          "roles": {
+            "Values": [
+              {
+                "field": {
+                  "Measure": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fact_loan"
+                      }
+                    },
+                    "Property": "Current Share"
+                  }
+                },
+                "queryRef": "fact_loan.Current Share",
+                "nativeQueryRef": "Current Share",
+                "displayName": "Current Share"
+              }
+            ]
+          }
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 24,
+            "y": 918,
+            "width": 1392,
+            "height": 32,
+            "z": 9,
+            "tabOrder": 9
+          },
+          "roles": {}
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 32,
+            "y": 302,
+            "width": 1350,
+            "height": 30,
+            "z": 10,
+            "tabOrder": 10
+          },
+          "roles": {}
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 32,
+            "y": 337,
+            "width": 1350,
+            "height": 72,
+            "z": 11,
+            "tabOrder": 11
+          },
+          "roles": {}
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 32,
+            "y": 414,
+            "width": 1350,
+            "height": 30,
+            "z": 12,
+            "tabOrder": 12
+          },
+          "roles": {}
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 32,
+            "y": 449,
+            "width": 1350,
+            "height": 72,
+            "z": 13,
+            "tabOrder": 13
+          },
+          "roles": {}
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 32,
+            "y": 526,
+            "width": 1350,
+            "height": 30,
+            "z": 14,
+            "tabOrder": 14
+          },
+          "roles": {}
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 32,
+            "y": 561,
+            "width": 1350,
+            "height": 72,
+            "z": 15,
+            "tabOrder": 15
+          },
+          "roles": {}
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 32,
+            "y": 638,
+            "width": 1350,
+            "height": 30,
+            "z": 16,
+            "tabOrder": 16
+          },
+          "roles": {}
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 32,
+            "y": 673,
+            "width": 1350,
+            "height": 72,
+            "z": 17,
+            "tabOrder": 17
+          },
+          "roles": {}
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 32,
+            "y": 750,
+            "width": 1350,
+            "height": 30,
+            "z": 18,
+            "tabOrder": 18
+          },
+          "roles": {}
+        },
+        {
+          "type": "textbox",
+          "title": "",
+          "position": {
+            "x": 32,
+            "y": 785,
+            "width": 1350,
+            "height": 72,
+            "z": 19,
+            "tabOrder": 19
+          },
+          "roles": {}
+        }
+      ]
+    }
+  ],
+  "metricExpressions": {
+    "Total Loans": "COUNTROWS(fact_loan)",
+    "Funded Amount": "SUM(fact_loan[funded_amnt])",
+    "Average Loan Amount": "AVERAGE(fact_loan[loan_amnt])",
+    "Average Interest Rate": "DIVIDE(AVERAGE(fact_loan[int_rate]), 100)",
+    "Resolved Loans": "SUM(fact_loan[resolved])",
+    "Defaulted Loans": "SUM(fact_loan[default_flag])",
+    "Default Rate": "DIVIDE([Defaulted Loans], [Resolved Loans])",
+    "Fully Paid Rate": "DIVIDE(SUM(fact_loan[fully_paid]), [Resolved Loans])",
+    "Current Share": "DIVIDE(SUM(fact_loan[current]), [Total Loans])",
+    "Interest Received": "SUM(fact_loan[total_rec_int])",
+    "Payments Received": "SUM(fact_loan[total_pymnt])",
+    "Average DTI": "AVERAGE(fact_loan[dti])",
+    "Default Origination Amount": "CALCULATE([Funded Amount], fact_loan[default_flag] = 1)",
+    "Net Unreturned Principal": "SUM(fact_loan[unreturned_principal])",
+    "Recovery Rate": "DIVIDE(CALCULATE(SUM(fact_loan[recoveries]), fact_loan[default_flag] = 1), SUM(fact_loan[pre_recovery_exposure]))",
+    "Net Return Proxy": "DIVIDE([Resolved Net Cash], [Resolved Funded Amount])",
+    "Average FICO": "BLANK()",
+    "Resolved Funded Amount": "CALCULATE([Funded Amount], fact_loan[resolved] = 1)",
+    "Resolved Payments": "CALCULATE([Payments Received], fact_loan[resolved] = 1)",
+    "Resolved Net Cash": "CALCULATE(SUM(fact_loan[net_cash]), fact_loan[resolved] = 1)",
+    "Resolved Coverage": "DIVIDE([Resolved Loans], [Total Loans])",
+    "Current Loans": "SUM(fact_loan[current])",
+    "Default Rate Baseline": "CALCULATE([Default Rate], REMOVEFILTERS(fact_loan[purpose]))",
+    "Segment Excess Default pp": "100 * ([Default Rate] - [Default Rate Baseline])",
+    "Segment Review Flag": "IF([Resolved Loans] >= 200 && [Default Rate] > [Default Rate Baseline], 1, BLANK())",
+    "Context Insight": "IF([Resolved Loans] = 0, \"No resolved loans in the current selection\", FORMAT([Defaulted Loans], \"#,0\") & \" charged-off/default outcomes among \" & FORMAT([Resolved Loans], \"#,0\") & \" resolved loans. \" & FORMAT([Current Loans], \"#,0\") & \" current loans remain outside resolved-outcome rates.\")",
+    "Period Coverage": "FORMAT(MIN(fact_loan[issue_date]), \"MMM yyyy\") & \" – \" & FORMAT(MAX(fact_loan[issue_date]), \"MMM yyyy\")"
+  }
+}

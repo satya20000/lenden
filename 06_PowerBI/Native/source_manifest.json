@@ -1,0 +1,22 @@
+{
+  "classification": "historical real-source snapshot",
+  "sourceProject": "03_LendingClub_Credit_Portfolio",
+  "files": [
+    {
+      "table": "fact_loan",
+      "file": "02_Cleaned_Data/fact_loan.csv",
+      "sha256": "cf6fa81b31635284a74334b37e21dbf09c343689fc1d4531fd82488cc1671956"
+    },
+    {
+      "table": "dim_grade",
+      "file": "02_Cleaned_Data/dim_grade.csv",
+      "sha256": "dc7f05b3961a93189f3e2dc124d78f6e5d6a1f5a58e9b235043b652220339248"
+    },
+    {
+      "table": "dim_date",
+      "file": "02_Cleaned_Data/dim_date.csv",
+      "sha256": "7bc965786de6bf29fa6cd41d60aee19a7fb0105278239fb3c40690afd206ff75"
+    }
+  ],
+  "generatedSellerDimension": null
+}
