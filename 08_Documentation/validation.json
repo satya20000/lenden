@@ -1,0 +1,18 @@
+[
+  {
+    "check": "Issue dates parse",
+    "passed": true
+  },
+  {
+    "check": "Funded amount positive",
+    "passed": true
+  },
+  {
+    "check": "Interest plausible",
+    "passed": true
+  },
+  {
+    "check": "SQLite integrity_check",
+    "passed": true
+  }
+]

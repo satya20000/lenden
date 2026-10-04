@@ -1,0 +1,3 @@
+one_table,one_key,many_table,many_key,cardinality,direction,active
+dim_grade,grade,fact_loan,grade,1:*,Single: one to many,True
+dim_date,date,fact_loan,issue_date,1:*,Single: one to many,True

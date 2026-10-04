@@ -1,0 +1,51 @@
+field,source_table,data_type,meaning,transformation
+loan_id,fact_loan,int64,Loan id,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+loan_amnt,fact_loan,int64,Loan amnt,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+funded_amnt,fact_loan,int64,Funded amnt,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+int_rate,fact_loan,float64,Int rate,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+annual_inc,fact_loan,float64,Annual inc,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+dti,fact_loan,float64,Dti,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+total_pymnt,fact_loan,float64,Total pymnt,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+total_rec_prncp,fact_loan,float64,Total rec prncp,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+total_rec_int,fact_loan,float64,Total rec int,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+recoveries,fact_loan,float64,Recoveries,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+collection_recovery_fee,fact_loan,float64,Collection recovery fee,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+revol_util,fact_loan,float64,Revol util,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+out_prncp,fact_loan,float64,Out prncp,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+installment,fact_loan,float64,Installment,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+delinq_2yrs,fact_loan,int64,Delinq 2yrs,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+inq_last_6mths,fact_loan,int64,Inq last 6mths,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+open_acc,fact_loan,int64,Open acc,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+revol_bal,fact_loan,int64,Revol bal,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+total_acc,fact_loan,int64,Total acc,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+grade,fact_loan,object,Grade,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+sub_grade,fact_loan,object,Sub grade,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+emp_length,fact_loan,object,Emp length,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+home_ownership,fact_loan,object,Home ownership,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+verification_status,fact_loan,object,Verification status,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+purpose,fact_loan,object,Purpose,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+issue_d,fact_loan,object,Issue d,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+issue_date,fact_loan,object,Issue date,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+last_pymnt_d,fact_loan,object,Last pymnt d,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+loan_status,fact_loan,object,Loan status,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+resolved,fact_loan,int64,Fully Paid or Charged Off/Default,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+default_flag,fact_loan,float64,"1 for Charged Off/Default, 0 for Fully Paid, NULL for unresolved loans",See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+fully_paid,fact_loan,int64,Fully paid,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+current,fact_loan,int64,Current,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+term_months,fact_loan,int64,Term months,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+issue_year,fact_loan,int32,Issue year,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+issue_month,fact_loan,object,Issue month,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+dti_band,fact_loan,object,Dti band,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+income_band,fact_loan,object,Income band,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+interest_band,fact_loan,object,Interest band,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+fico,fact_loan,float64,Fico,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+fico_band,fact_loan,object,Fico band,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+net_cash,fact_loan,float64,total_pymnt minus collection_recovery_fee minus funded_amnt; recovery already included in total_pymnt,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+unreturned_principal,fact_loan,float64,Unreturned principal,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+pre_recovery_exposure,fact_loan,float64,Pre recovery exposure,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+grade,dim_grade,object,Grade,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+date,dim_date,object,Date,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+year,dim_date,int32,Year,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+month,dim_date,object,Month,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+quarter,dim_date,int32,Quarter,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
+month_number,dim_date,int32,Month number,See pipeline.py and metric_definitions.md; NULL is unknown unless explicitly a structural zero
