@@ -33,7 +33,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
+                  "Value": "14D"
                 }
               }
             },
@@ -42,7 +42,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#172A43'"
+                      "Value": "'#17324D'"
                     }
                   }
                 }
@@ -118,11 +118,11 @@
               {
                 "textRuns": [
                   {
-                    "value": "2007–2011 accepted-loan snapshot • Resolved outcomes only for default/return • Return is cumulative, not annualized • FICO unavailable",
+                    "value": "2007\u20132011 accepted-loan snapshot \u2022 Resolved outcomes only for default/return \u2022 Return is cumulative, not annualized \u2022 FICO unavailable",
                     "textStyle": {
                       "fontFamily": "Segoe UI",
                       "fontSize": "11pt",
-                      "color": "#172A43",
+                      "color": "#53657A",
                       "fontWeight": "normal"
                     }
                   }
